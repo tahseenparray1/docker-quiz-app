@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(39, 37, 37);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.app {
+  max-width: 600px;
+
+  margin: 40px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  font-family: "Doto", sans-serif;
+  font-size: 24px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+.image {
+  height: 150px;
+}
+.question {
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-weight: bold;
+}
+.options-container {
+  margin-bottom: 30px;
+}
+.options-list {
+  position: relative;
+  list-style: none;
+}
+.option {
+  font-size: 20px;
+  background-color: orange;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  border: 1px solid rgb(107, 107, 98);
+  color: beige;
+  padding: 8px 18px;
+  border-radius: 16px;
+}
+.next {
+  border-radius: 16px;
+  padding: 8px 18px;
+  color: white;
+  background-color: rgb(77, 75, 75);
+  border: 0px;
+}
+.progress-bar-container {
+  background-color: beige;
+  height: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.progress-bar {
+  background-color: aqua;
+  height: 10px;
+  border-radius: 8px;
+}
+.info-bottom {
+  display: flex;
+  justify-content: space-between;
+  color: azure;
+  margin-bottom: 20px;
+}
+.selected {
+  font-size: 20px;
+  background-color: orange;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  transform: translateX(30px);
+}
+.correct {
+  font-size: 20px;
+  background-color: aqua;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+.beforeSelection {
+  font-size: 20px;
+  color: white;
+  border: 1px solid rgb(80, 77, 77);
+  background-color: rgb(80, 77, 77);
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.beforeSelection:hover {
+  transform: translateX(25px);
+  border: 1px solid rgb(80, 77, 77);
+  background-color: rgb(41, 40, 40);
+}

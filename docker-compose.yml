@@ -1,0 +1,34 @@
+services:
+  frontend:
+    build:
+      context: ./quiz-app
+      dockerfile: Dockerfile
+    container_name: quiz-frontend
+    ports:
+      - "3000:5173"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./express-backend
+      dockerfile: Dockerfile
+    container_name: quiz-backend
+    ports:
+      - "8080:3000"
+    env_file:
+      - ./.env
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: quiz-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: tahseen
+      MONGO_INITDB_ROOT_PASSWORD: tahseen123
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
